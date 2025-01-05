@@ -10,10 +10,7 @@ class LangflowClient {
   async post(endpoint, body, headers = { "Content-Type": "application/json" }) {
     headers["Authorization"] = `Bearer ${this.applicationToken}`;
     const url = `${this.baseURL}${endpoint}`;
-    console.log("hey there"  + url);
-    console.log("hey : " + this.applicationToken);
-    
-    
+    console.log("url : " + url);    
 
     try {
       const response = await fetch(url, {
